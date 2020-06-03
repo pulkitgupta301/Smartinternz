@@ -1,0 +1,278 @@
+[
+    {
+        "id": "fd8a2ac6.83e9c8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e5769b8c.4b7f18",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Dashboard",
+        "icon": "Ask me",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "81250f59.577a1",
+        "type": "ui_group",
+        "z": "",
+        "name": "Reply",
+        "tab": "e5769b8c.4b7f18",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "a442a25c.fae3f",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "58ec711b.4c795",
+        "type": "ui_group",
+        "z": "",
+        "name": "Ask me",
+        "tab": "e5769b8c.4b7f18",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "f4e243f3.8cfde",
+        "type": "ui_form",
+        "z": "fd8a2ac6.83e9c8",
+        "name": "",
+        "label": "",
+        "group": "58ec711b.4c795",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Enter You want to Search",
+                "value": "text",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "text": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "",
+        "x": 170.60000228881836,
+        "y": 124.80000305175781,
+        "wires": [
+            [
+                "497d32d0.cd43ac"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "497d32d0.cd43ac",
+        "type": "function",
+        "z": "fd8a2ac6.83e9c8",
+        "name": "",
+        "func": "msg.payload=msg.payload.text;\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 332.6000785827637,
+        "y": 247.00000190734863,
+        "wires": [
+            [
+                "69686fc7.9f5b8",
+                "fb4148c6.7e9f98"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "9f9053e0.cd5d9",
+        "type": "debug",
+        "z": "fd8a2ac6.83e9c8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 672.6000595092773,
+        "y": 74.00000190734863,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "69686fc7.9f5b8",
+        "type": "ui_text",
+        "z": "fd8a2ac6.83e9c8",
+        "group": "58ec711b.4c795",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Customer",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 371.6000061035156,
+        "y": 404.2000045776367,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "ad8a1bd0.8e05e8",
+        "type": "function",
+        "z": "fd8a2ac6.83e9c8",
+        "name": "",
+        "func": "msg.payload=msg.payload.output.text[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 639.6000576019287,
+        "y": 264.2000036239624,
+        "wires": [
+            [
+                "8bc39a71.18d208"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "8bc39a71.18d208",
+        "type": "ui_text",
+        "z": "fd8a2ac6.83e9c8",
+        "group": "81250f59.577a1",
+        "order": 3,
+        "width": "4",
+        "height": "5",
+        "name": "",
+        "label": "chatbot",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 733.600058555603,
+        "y": 401.6000051498413,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "fb4148c6.7e9f98",
+        "type": "watson-conversation-v1",
+        "z": "fd8a2ac6.83e9c8",
+        "name": "Customer Help Desk[Chatbot]",
+        "workspaceid": "2b1977c7-0e6a-493f-8a72-5341344f1a88",
+        "multiuser": false,
+        "context": true,
+        "empty-payload": false,
+        "service-endpoint": "https://api.eu-gb.assistant.watson.cloud.ibm.com/instances/2d624ba4-87b7-40d2-a536-c4fb9ea7ce33",
+        "timeout": "",
+        "optout-learning": false,
+        "x": 511.6000785827637,
+        "y": 163,
+        "wires": [
+            [
+                "ad8a1bd0.8e05e8",
+                "9f9053e0.cd5d9"
+            ]
+        ],
+        "l": false
+    }
+]
